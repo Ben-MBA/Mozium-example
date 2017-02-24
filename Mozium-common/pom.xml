@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>Mozium-common</artifactId>
+	<packaging>jar</packaging>
+	<parent>
+		<artifactId>Mozium-examples</artifactId>
+		<groupId>com.mozium.examples</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+
+	<name>Common</name>
+	<url>https://github.com/Ben-MBA/Mozium-common/tree/master</url>
+	<scm>
+		<connection>scm:git:https://github.com/mozium/tree/master/Mozium-common.git</connection>
+		<developerConnection>scm:git:https://github.com/Ben-MBA/Mozium-common.git</developerConnection>
+		<url>https://github.com/Ben-MBA/Mozium-common/tree/master</url>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>Ben-MBA</id>
+			<name>Moez Ben Aissa</name>
+			<email>moez.benaissa@gmail.com</email>
+		</developer>
+	</developers>
+	<!-- *******************************************Dependencies****************************************************** -->
+	<dependencies>
+		<dependency>
+			<groupId>com.mozium</groupId>
+			<artifactId>mozium</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+	</dependencies>
+
+</project>
