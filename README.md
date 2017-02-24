@@ -1,6 +1,6 @@
-#Mozium
+#Mozium-examples
 
-This project is a parent for the both of exmples web and mobile using Mozium Framework.
+This project is a parent for the both of web and mobile exmples using Mozium Framework.
 
 #Installation : 
 You have just to clone the project. Open it with eclipse and then Enjoy testing!
