@@ -14,10 +14,6 @@ local.properties
 .settings/
 .loadpath
 
-/Mozium-WebTest/test-output
-/Mozium-MobileTest/test-output
-/Mozium-WebTest/target
-/Mozium-MobileTest/target
 # Eclipse Core
 .project
 
