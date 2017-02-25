@@ -140,3 +140,4 @@ xcuserdata
 *.xcuserstate
 ### Android template
 # Built application files
+.DS_Store
