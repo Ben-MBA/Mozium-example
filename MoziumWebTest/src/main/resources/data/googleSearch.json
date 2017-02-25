@@ -1,0 +1,25 @@
+{
+	
+	"ar":{
+		"searchedKey":"Moez Ben Aissa1",
+		"KeyTest":"test"
+	},
+	"fr":{
+		"searchedKey":"Moez Ben Aissa2",
+		"KeyTest":"test"
+
+	},
+	"gb":{
+		"searchedKey":"Moez Ben Aissa2",
+		"KeyTest":"test"
+	},
+	"en":{
+		"searchedKey":"Moez Ben Aissa3",
+		"KeyTest":"test"
+	},
+	"sp":{
+		"searchedKey":"Moez Ben Aissa4",
+		"KeyTest":"test"
+	}
+	
+}

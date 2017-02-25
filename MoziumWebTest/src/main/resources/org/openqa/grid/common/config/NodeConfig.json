@@ -1,0 +1,43 @@
+{
+  "capabilities":
+      [
+        {
+          "browserName": "firefox",
+          "maxInstances": 20,
+          "seleniumProtocol": "WebDriver"
+        },
+        {
+          "browserName": "chrome",
+          "maxInstances": 20,
+          "seleniumProtocol": "WebDriver"
+        },
+        {
+          "browserName": "internet explorer",
+          "maxInstances": 20,
+          "seleniumProtocol": "WebDriver"
+        },
+        {
+          "browserName": "opera",
+          "maxInstances": 20,
+          "seleniumProtocol": "WebDriver"
+        },
+        {
+          "browserName": "htmlunit",
+          "maxInstances": 20,
+          "seleniumProtocol": "WebDriver"
+        }
+      ],
+  
+    "nodePolling":5000,
+    "maxConcurrent": 5,
+    "cleanUpCycle":2000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "maxSession": 20,
+    "port": 5556,
+    "remoteHost" : "http://127.0.0.1:5556",
+    "register": true,
+    "registerCycle": 10000,
+    "hubHost": "127.0.0.1",
+    "hubPort": 4444
+  
+}

@@ -1,0 +1,18 @@
+{
+	"driverType":"webDriver",
+    "timeOut": 7, 
+    "retryTestingCount":1,
+    "highlightActiveElement":false,
+    "localExecution": true,
+    "enableCustomLog": false,
+	"enableDefaultLog": false,
+	"enabledefaultLogVerbose": false,
+	"extentx" : false,
+    "hubUrl":"http://localhost:4444/wd/hub",
+    
+	"browserName":"chrome",
+	"version":null,
+	"platform":"ANY",
+	"startUrl":"http://www.google.com",
+	"proxyUrl":null
+}

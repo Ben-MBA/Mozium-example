@@ -1,0 +1,114 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>Mozium-webTest</artifactId>
+	<parent>
+		<artifactId>Mozium-examples</artifactId>
+		<groupId>com.mozium.examples</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<packaging>jar</packaging>
+
+	<name>Mozium-webTest</name>
+	<url>https://github.com/Ben-MBA/Mozium-webTest/tree/master</url>
+	<scm>
+		<connection>scm:git:https://github.com/mozium/tree/master/Mozium-webTest.git</connection>
+		<developerConnection>scm:git:https://github.com/Ben-MBA/Mozium-webTest.git</developerConnection>
+		<url>https://github.com/Ben-MBA/Mozium-webTest/tree/master</url>
+	</scm>
+	<developers>
+		<developer>
+			<id>Ben-MBA</id>
+			<name>Moez Ben Aissa</name>
+			<email>moez.benaissa@gmail.com</email>
+		</developer>
+	</developers>
+	<!-- *******************************************Dependencies ****************************************************** -->
+	<dependencies>
+		<dependency>
+			<groupId>com.mozium.examples</groupId>
+			<artifactId>Mozium-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<!-- *******************************************Profiles ****************************************************** -->
+	<profiles>
+
+		<!-- *******************************************Tablet****************************************************** -->
+		<profile>
+			<id>LocalExec</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/local/moziumWebTest-Local-debug.xml</testConfig.xml>
+			</properties>
+		</profile>
+		<profile>
+			<id>RemoteExec</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/moziumWebTest-remote-All.xml</testConfig.xml>
+			</properties>
+		</profile>
+	</profiles>
+
+	<!-- *******************************************Plugins****************************************************** -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${maven-compiler-plugin.java.version}</source>
+					<target>${maven-compiler-plugin.java.version}</target>
+					<encoding>${maven-compiler-plugin.encoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven-source-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+				<configuration>
+					<properties>
+						<reportsDirectory>target/</reportsDirectory>
+						<workingDirectory>target/</workingDirectory>
+						<property>
+							<name>outputDirectory</name>
+							<value>target/</value>
+						</property>
+					</properties>
+					<environmentVariables>
+						<browsermode>${language}</browsermode>
+						<browsermode>${defaultResoltionFormat}</browsermode>
+						<browsermode>${browserName}</browsermode>
+
+					</environmentVariables>
+					<suiteXmlFiles>
+						<suiteXmlFile>${testConfig.xml}</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
