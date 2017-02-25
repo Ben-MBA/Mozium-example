@@ -144,3 +144,7 @@ xcuserdata
 # Built application files
 .DS_Store
 .DS_Store?
+
+.settings
+.classpath
+.project
