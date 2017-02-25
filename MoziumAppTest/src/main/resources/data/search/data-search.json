@@ -1,0 +1,24 @@
+{
+	"fr": {
+		"activity": "Promo",
+		"where": "France",
+		"from": "Now",
+		"to": "+2d",
+		"deals": "30%"
+	},
+	"gb": {
+		"activity": "Promo",
+		"where": "France",
+		"from": "Now",
+		"to": "+2d",
+		"deals": "30%"
+	},
+	"ja": {
+		"activity": "Promo",
+		"where": "France",
+		"from": "Now",
+		"to": "+2d",
+		"deals": "30%"
+	}
+}
+	

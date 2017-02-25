@@ -1,0 +1,155 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>Mozium-appTest</artifactId>
+	<name>Mozium-appTest</name>
+	<parent>
+		<artifactId>Mozium-examples</artifactId>
+		<groupId>com.mozium.examples</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<packaging>jar</packaging>
+
+	<description>Automated test for MoziumApp andoird/ios application</description>
+	<url>https://github.com/Ben-MBA/Mozium-appTest/tree/master</url>
+	<scm>
+		<connection>scm:git:https://github.com/mozium/tree/master/Mozium-appTest.git</connection>
+		<developerConnection>scm:git:https://github.com/Ben-MBA/Mozium-appTest.git</developerConnection>
+		<url>https://github.com/Ben-MBA/Mozium-appTest/tree/master</url>
+	</scm>
+	<developers>
+		<developer>
+			<id>Ben-MBA</id>
+			<name>Moez Ben Aissa</name>
+			<email>moez.benaissa@gmail.com</email>
+		</developer>
+	</developers>
+	<!-- *******************************************Dependencies ****************************************************** -->
+	<dependencies>
+		<dependency>
+			<groupId>com.mozium.examples</groupId>
+			<artifactId>Mozium-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<!-- *******************************************Profiles ****************************************************** -->
+	<profiles>
+
+		<!-- *******************************************Tablet****************************************************** -->
+		<profile>
+			<id>TabletApp-Android-Debug</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/tabletApp-android-debug-localExecution.xml</testConfig.xml>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>TabletApp-IOS-Debug</id>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/tabletApp-ios-debug-localExecution</testConfig.xml>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>TabletApp-Android-AllTests</id>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/tabletApp-andoid-all.xml</testConfig.xml>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>TabletApp-Ios-AllTests</id>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/tabletApp-ios-all.xml</testConfig.xml>
+			</properties>
+		</profile>
+
+
+		<!-- ******************************************* Smartphone ****************************************************** -->
+
+		<profile>
+			<id>Smartphone-Android-Debug</id>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/Smartphone-android-debug-localExecution.xml</testConfig.xml>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>Smartphone-IOS-Debug</id>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/Smartphone-ios-debug-localExecution</testConfig.xml>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>Smartphone-Android-AllTests</id>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/Smartphone-andoid-all.xml</testConfig.xml>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>Smartphone-Ios-AllTests</id>
+			<properties>
+				<testConfig.xml>./src/main/resources/exection/Smartphone-ios-all.xml</testConfig.xml>
+			</properties>
+		</profile>
+	</profiles>
+
+	<!-- *******************************************Plugins****************************************************** -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${maven-compiler-plugin.java.version}</source>
+					<target>${maven-compiler-plugin.java.version}</target>
+					<encoding>${maven-compiler-plugin.encoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>${maven-source-plugin.version}</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+				<configuration>
+					<properties>
+						<reportsDirectory>target/</reportsDirectory>
+						<workingDirectory>target/</workingDirectory>
+						<property>
+							<name>outputDirectory</name>
+							<value>target/</value>
+						</property>
+					</properties>
+					<environmentVariables>
+						<browsermode>${browsermode}</browsermode>
+					</environmentVariables>
+					<suiteXmlFiles>
+						<suiteXmlFile>${testConfig.xml}</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

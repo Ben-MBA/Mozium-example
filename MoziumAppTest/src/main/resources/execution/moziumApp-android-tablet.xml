@@ -1,0 +1,48 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite thread-count="2" verbose="0" name="TabletApp" parallel="methods">
+
+	<!--****************************************** Listners ********************************* -->
+
+	<listeners>
+<!-- 	    // you can add directlly the default listners of Mozium -->
+	    
+<!-- 		<listener class-name="com.mozium.api.MoziumSuiteExecutionListener" /> -->
+<!-- 		<listener class-name="com.mozium.api.MoziumTestExecutionListner" /> -->
+		
+		<listener class-name="com.examples.common.mozium.api.external.ExternalSuiteExecutionListner" />
+		<listener class-name="com.examples.common.mozium.api.external.ExternalTestExecutionListner" />
+		
+		<listener class-name="com.examples.moziumApp.listener.MobileAppsTestListener" />
+		
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+
+
+	<!--****************************************** Parameters ********************************* -->
+
+	<parameter name="configfile"
+		value="./com/mozium/framework/config/MoziumApp-Tablet-Android-config.json" />
+	<parameter name="protocol" value="appium" />
+
+	<!--****************************************** Tests ************************************** -->
+
+	<test name="Account">
+		<packages>
+			<package name="com.examples.moziumApp.tests.account" />
+		</packages>
+	</test>
+	
+	<test name="Search">
+		<packages>
+			<package name="com.examples.moziumApp.tests.searchs" />
+		</packages>
+	</test>
+	
+	<test name="Settings">
+		<packages>
+			<package name="com.examples.moziumApp.tests.settings" />
+		</packages>
+	</test>
+	
+</suite>
