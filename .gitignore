@@ -15,6 +15,8 @@ local.properties
 
 /Mozium-WebTest/test-output
 /Mozium-MobileTest/test-output
+/Mozium-WebTest/target
+/Mozium-MobileTest/target
 # Eclipse Core
 .project
 
@@ -141,3 +143,4 @@ xcuserdata
 ### Android template
 # Built application files
 .DS_Store
+.DS_Store?
