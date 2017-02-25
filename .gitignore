@@ -13,7 +13,8 @@ local.properties
 .settings/
 .loadpath
 
-/WebMobile/test-output
+/Mozium-WebTest/test-output
+/Mozium-MobileTest/test-output
 # Eclipse Core
 .project
 
