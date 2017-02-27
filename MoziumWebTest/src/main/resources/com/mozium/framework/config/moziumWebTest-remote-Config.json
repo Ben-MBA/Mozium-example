@@ -1,13 +1,12 @@
 {
-	"driverType":"webDriver",
+    "driverType":"webDriver",
     "timeOut": 7, 
     "retryTestingCount":1,
     "highlightActiveElement":false,
     "localExecution": false,
-    "enableCustomLog": false,
-	"enableDefaultLog": false,
-	"enabledefaultLogVerbose": false,
-	"extentx" : false,
+    "enableGenerateReportScreenShots": false,
+    "enableGenerateDocumentation":false,
+    "extentx" : false,
     "hubUrl":"http://localhost:4444/wd/hub",
     
 	"browserName":"chrome",
