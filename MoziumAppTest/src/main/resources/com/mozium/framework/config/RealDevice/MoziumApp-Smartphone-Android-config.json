@@ -4,10 +4,9 @@
 	"retryTestingCount": 1,
 	"highlightActiveElement": false,
 	"localExecution": false,
-	"generateFunctionalDoc": true,
-	"generateTechnicalDoc": false,
+	"enableGenerateReportScreenShots": false,
+        "enableGenerateDocumentation":false,
 	"extentx": false,
-	"verbose": false,
 	"hubUrl": "http://127.0.0.1:5555/wd/hub",
 	
 	"automationName": "appium",
