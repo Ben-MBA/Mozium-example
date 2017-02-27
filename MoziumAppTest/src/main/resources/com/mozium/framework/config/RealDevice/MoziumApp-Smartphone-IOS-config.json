@@ -4,10 +4,9 @@
     "retryTestingCount":1,
     "highlightActiveElement":false,
     "localExecution": false,
-    "generateFunctionalDoc" : false,
-    "generateTechnicalDoc" : false,
+    "enableGenerateReportScreenShots": false,
+    "enableGenerateDocumentation":false,
     "extentx" : false,
-    "verbose" : false, 
     "hubUrl":"http://127.0.0.1:4723/wd/hub",
     
 	"automationName":"XCUITest",
